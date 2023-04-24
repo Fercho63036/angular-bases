@@ -15,8 +15,11 @@ export class MainPageComponent {
     name: 'Goku',
     power: 9500,
   },{
-    name: 'Vegueta',
+    name: 'Picollo',
     power: 7500,
   }];
 
+  onNewCharacter(character: Character):void{
+    this.characters.push(character);
+  }
 }
