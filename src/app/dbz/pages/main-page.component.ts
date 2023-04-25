@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { Character } from '../interfaces/character.interface';
 
 @Component({
@@ -21,5 +21,9 @@ export class MainPageComponent {
 
   onNewCharacter(character: Character):void{
     this.characters.push(character);
+  }
+
+  onDelete(index: number){
+    this.characters.splice(index,1);
   }
 }
